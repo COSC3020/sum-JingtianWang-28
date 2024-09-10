@@ -1,6 +1,5 @@
 const fs = require('fs');
 const jsc = require('jsverify');
-
 eval(fs.readFileSync('code.js')+'');
 
 const testSum =
@@ -9,3 +8,5 @@ const testSum =
     });
 
 jsc.assert(testSum);
+
+console.log("Sum of [1, 2, 3]: ", sum([1, 2, 3]));
