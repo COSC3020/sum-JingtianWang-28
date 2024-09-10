@@ -1,7 +1,6 @@
 const fs = require('fs');
 const jsc = require('jsverify');
-
-eval(fs.readFileSync('code.js')+'');
+eval(fs.readFileSync('sum.js')+'');
 
 const testSum =
     jsc.forall("array nat", function(arr) {
@@ -9,3 +8,5 @@ const testSum =
     });
 
 jsc.assert(testSum);
+
+console.log("Sum of [1, 2, 3]: ", sum([1, 2, 3]));
