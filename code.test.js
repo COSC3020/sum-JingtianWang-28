@@ -1,6 +1,6 @@
 const fs = require('fs');
 const jsc = require('jsverify');
-eval(fs.readFileSync('sum.js')+'');
+eval(fs.readFileSync('code.js')+'');
 
 const testSum =
     jsc.forall("array nat", function(arr) {
